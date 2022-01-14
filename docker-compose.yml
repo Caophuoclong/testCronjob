@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  mongo:
+    restart: always
+    image: mongo
+    container_name: mongo
+    volumes: 
+      - /home/phuoclong/data/db:/data/db:rw
+      - /home/phuoclong/backups:/backups:rw
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "root"
+      MONGO_INITDB_ROOT_PASSWORD: "516489"
