@@ -1,0 +1,1 @@
+30 * * * $HOME/testcronjob/backup.sh

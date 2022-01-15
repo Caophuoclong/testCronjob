@@ -7,6 +7,10 @@ services:
     volumes: 
       - $HOME/data/db:/data/db:rw
       - $HOME/backups:/backups:rw
+      - ./backups.sh:/backups.sh:rwx
+      - ./crontab:crontab:rw
+    command:
+      
     ports:
       - "27017:27017"
     environment:
