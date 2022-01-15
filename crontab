@@ -1,1 +1,1 @@
-7 * * * * ~/backup.sh
+30 * * * * sh /home/username/backup.sh
