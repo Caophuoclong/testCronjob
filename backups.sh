@@ -11,7 +11,7 @@ echo "===================="
 echo "Compress mongo backups to gzip"
 echo "============================"
 cd $HOME/backups
-sudo rm -rf $FILENAME.tar.gz
+sudo rm -rf $FILENAME
 sudo tar -zcvf $FILENAME.tar.gz $FILENAME
 echo "Compress mongo backups done"
 echo "============================"
