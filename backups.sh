@@ -11,9 +11,12 @@ echo "===================="
 echo "Compress mongo backups to gzip"
 echo "============================"
 cd $HOME/backups
+sudo rm -rf $FILENAME.tar.gz
 sudo tar -zcvf $FILENAME.tar.gz $FILENAME
 echo "Compress mongo backups done"
 echo "============================"
 echo "Up load backups file to DigitalOcean"
 echo  "===================="
 s3cmd put $BACKUPS/$FILENAME.tar.gz s3://$BUCKET
+echo "Upload backups file done"
+sudo rm -rf $BACKUPS/$FILENAME.tar.gz
