@@ -1,11 +1,11 @@
-USERNAME=root
-PASSWORD=516489
+MONGODB_USERNAME=root
+MONGODB_PASSWORD=516489
 BACKUPS=$HOME/backups
 FILENAME=`date +%H-%M-%d-%m-%Y`
-BUCKET=backupmongo/backup-mongo
+BUCKET=backupmongo/backup-mongo/$FILENAME
 echo "Create mongo backups"
 echo  "===================="
-docker exec -it mongo mongodump  -u $USERNAME -p $PASSWORD --gzip --out /backups/$FILENAME
+docker exec -it mongo mongodump  -u $MONGODB_USERNAME -p $MONGODB_PASSWORD --gzip --out /backups/$FILENAME
 echo "Dump mongo done"
 echo "===================="
 echo "Compress mongo backups to gzip"
